@@ -157,6 +157,7 @@
   .header-container {
     height: 70px;
     gap: 20px;
+    justify-content: space-between;
   }
 
   .logo-favicon {
@@ -174,6 +175,7 @@
 
   .menu-toggle {
     display: block;
+    margin-left: auto;
   }
 
   .nav {
@@ -208,6 +210,15 @@
     padding: 10px 0;
     width: 100%;
     text-align: left;
+    color: white;
+  }
+
+  .nav-link:hover {
+    color: #69d5c3;
+  }
+
+  .book-session-link {
+    color: white !important;
   }
 }
 
