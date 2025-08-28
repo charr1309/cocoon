@@ -183,13 +183,13 @@
     top: 70px;
     left: 0;
     right: 0;
-    background: linear-gradient(135deg, rgba(69, 90, 120, 0.95) 0%, rgba(45, 55, 72, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(91, 196, 177, 0.95) 0%, rgba(75, 176, 161, 0.9) 100%);
     backdrop-filter: blur(10px);
     transform: translateY(-100%);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     margin-left: 0;
   }
 
