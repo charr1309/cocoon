@@ -22,10 +22,10 @@ const heroSlides = [
     description: 'Specialized massage therapy for expecting mothers'
   },
   {
-    image: 'https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&fit=crop',
-    title: 'Restore & Rejuvenate',
-    subtitle: 'In Peaceful Meadows',
-    description: 'Experience deep relaxation surrounded by nature\'s tranquil beauty'
+    image: 'https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&fit=crop',
+    title: 'Therapeutic Touch',
+    subtitle: 'Healing Hands',
+    description: 'Experience the power of therapeutic massage in a serene spa environment'
   }
 ];
 
