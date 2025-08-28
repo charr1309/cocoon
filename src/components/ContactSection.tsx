@@ -58,7 +58,7 @@ const ContactSection: React.FC = () => {
                   <Mail className="contact-icon" />
                   <div>
                     <h4>Email</h4>
-                    <p>hello@cocoonmassage.com</p>
+                    <p>contact@cocoonmassageandwellness.com</p>
                   </div>
                 </div>
 
