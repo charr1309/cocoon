@@ -39,6 +39,7 @@ const Header: React.FC = () => {
   };
   const scrollToSection = (sectionId: string) => {
     if (location.pathname !== '/') {
+      // Navigate to home page first, then scroll to section
       window.location.href = `/#${sectionId}`;
       return;
     }

@@ -15,6 +15,21 @@ const Home: React.FC = () => {
   useEffect(() => {
     setIsLoaded(true);
     
+    // Handle hash navigation from other pages
+    const handleHashNavigation = () => {
+      const hash = window.location.hash.substring(1);
+      if (hash) {
+        setTimeout(() => {
+          const element = document.getElementById(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    };
+    
+    handleHashNavigation();
+    
     // Add scroll animation observer
     const observerOptions = {
       threshold: 0.1,
