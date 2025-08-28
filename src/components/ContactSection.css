@@ -281,4 +281,10 @@
   .message-content {
     max-width: 90%;
   }
+
+  /* Break long email address on mobile */
+  .contact-item p {
+    word-break: break-all;
+    line-height: 1.4;
+  }
 }
