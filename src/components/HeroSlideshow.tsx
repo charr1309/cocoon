@@ -49,47 +49,49 @@ const HeroSlideshow: React.FC = () => {
   };
 
   return (
-    <div className="hero-slideshow">
-      <div className="slides-container">
+    <section className="hero-slideshow">
+      <div className="slideshow-container">
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`slide ${index === currentSlide ? 'active' : ''}`}
+            className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
           >
-            <img src={slide.image} alt={slide.title} className="slide-image" />
-            <div className="slide-overlay">
-              <div className="slide-content">
-                <h1>{slide.title}</h1>
-                <p>{slide.subtitle}</p>
-                <button 
-                  className="btn hero-btn"
-                  onClick={() => window.open('https://spread-your-wings.noterro.com', '_blank')}
-                >
-                  Book Your Session
-                </button>
-              </div>
+            <img 
+              src={slide.image} 
+              alt={slide.title}
+              className="hero-image"
+            />
+            <div className="hero-content">
+              <h1 className="hero-title">{slide.title}</h1>
+              <p className="hero-subtitle">{slide.subtitle}</p>
+              <button 
+                className="hero-button"
+                onClick={() => window.open('https://spread-your-wings.noterro.com', '_blank')}
+              >
+                Book Your Session
+              </button>
             </div>
           </div>
         ))}
       </div>
 
-      <button className="nav-btn prev-btn" onClick={prevSlide}>
+      <button className="hero-nav hero-prev" onClick={prevSlide}>
         <ChevronLeft size={24} />
       </button>
-      <button className="nav-btn next-btn" onClick={nextSlide}>
+      <button className="hero-nav hero-next" onClick={nextSlide}>
         <ChevronRight size={24} />
       </button>
 
-      <div className="indicators">
+      <div className="hero-indicators">
         {slides.map((_, index) => (
           <button
             key={index}
-            className={`indicator ${index === currentSlide ? 'active' : ''}`}
+            className={`hero-indicator ${index === currentSlide ? 'active' : ''}`}
             onClick={() => goToSlide(index)}
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
