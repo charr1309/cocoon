@@ -226,8 +226,9 @@
   }
 
   .hero-logo {
-    top: 85px;
-    right: 20px;
+    top: 100px;
+    left: 20px;
+    right: auto;
   }
 
   .hero-logo img {
@@ -303,8 +304,9 @@
   }
 
   .hero-logo {
-    top: 80px;
-    right: 15px;
+    top: 90px;
+    left: 15px;
+    right: auto;
   }
 
   .hero-logo img {
