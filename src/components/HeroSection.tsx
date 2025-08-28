@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import './HeroSection.css';
 
 const heroSlides = [
@@ -18,88 +19,100 @@ const heroSlides = [
 
 const HeroSection: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   // Auto-advance slides
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+      if (!isTransitioning) {
+        nextSlide();
+      }
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [isTransitioning]);
 
   const goToSlide = (index: number) => {
+    if (isTransitioning || index === currentSlide) return;
+    setIsTransitioning(true);
     setCurrentSlide(index);
+    setTimeout(() => setIsTransitioning(false), 500);
   };
 
   const nextSlide = () => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
     setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
+    setTimeout(() => setIsTransitioning(false), 500);
   };
 
   const prevSlide = () => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
     setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+    setTimeout(() => setIsTransitioning(false), 500);
   };
 
   return (
-    <div id="heroCarousel" className="carousel slide carousel-fade vh-100" data-bs-ride="carousel">
-      <div className="carousel-indicators">
-        {heroSlides.map((_, index) => (
-          <button
-            key={index}
-            type="button"
-            className={index === currentSlide ? 'active' : ''}
-            onClick={() => goToSlide(index)}
-            aria-label={`Slide ${index + 1}`}
-          />
-        ))}
-      </div>
-
-      <div className="carousel-inner h-100">
-        {heroSlides.map((slide, index) => (
-          <div
-            key={index}
-            className={`carousel-item h-100 ${index === currentSlide ? 'active' : ''}`}
-          >
-            <img
-              src={slide.image}
-              className="d-block w-100 h-100 hero-image"
-              alt={slide.title}
-              loading={index === 0 ? 'eager' : 'lazy'}
-            />
-            <div className="carousel-caption d-flex flex-column justify-content-center align-items-center h-100 text-center">
-              <div className="hero-content">
-                <h1 className="hero-title display-1 fw-light mb-3">{slide.title}</h1>
-                <h2 className="hero-subtitle display-4 fw-light text-primary mb-4">{slide.subtitle}</h2>
-                <p className="hero-description lead mb-5">{slide.description}</p>
-                <button 
-                  className="btn btn-primary btn-lg px-5 py-3 hero-cta-btn"
-                  onClick={() => window.open('https://spread-your-wings.noterro.com', '_blank')}
-                >
-                  Book Your Session
-                </button>
+    <section className="hero-section">
+      <div className="hero-container">
+        <div className="hero-slides">
+          {heroSlides.map((slide, index) => (
+            <div
+              key={index}
+              className={`hero-slide ${index === currentSlide ? 'active' : ''}`}
+            >
+              <img
+                src={slide.image}
+                alt={slide.title}
+                className="hero-image"
+                loading={index === 0 ? 'eager' : 'lazy'}
+              />
+              <div className="hero-overlay">
+                <div className="hero-content">
+                  <h1 className="hero-title">{slide.title}</h1>
+                  <h2 className="hero-subtitle">{slide.subtitle}</h2>
+                  <p className="hero-description">{slide.description}</p>
+                  <button 
+                    className="hero-cta-btn"
+                    onClick={() => window.open('https://spread-your-wings.noterro.com', '_blank')}
+                  >
+                    Book Your Session
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <button
-        className="carousel-control-prev"
-        type="button"
-        onClick={prevSlide}
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        onClick={nextSlide}
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true"></span>
-        <span className="visually-hidden">Next</span>
-      </button>
-    </div>
+        <button
+          className="hero-nav hero-nav-prev"
+          onClick={prevSlide}
+          disabled={isTransitioning}
+        >
+          <ChevronLeft size={24} />
+        </button>
+        
+        <button
+          className="hero-nav hero-nav-next"
+          onClick={nextSlide}
+          disabled={isTransitioning}
+        >
+          <ChevronRight size={24} />
+        </button>
+
+        <div className="hero-indicators">
+          {heroSlides.map((_, index) => (
+            <button
+              key={index}
+              className={`hero-indicator ${index === currentSlide ? 'active' : ''}`}
+              onClick={() => goToSlide(index)}
+              disabled={isTransitioning}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 
