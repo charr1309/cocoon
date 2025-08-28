@@ -323,7 +323,9 @@
   }
 
   .hero-description {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    padding: 0 60px;
+    line-height: 1.4;
   }
 
   .hero-cta-btn {
