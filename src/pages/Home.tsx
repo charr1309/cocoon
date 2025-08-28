@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import HeroSection from '../components/HeroSection';
 import ServicesSection from '../components/ServicesSection';
 import FindYourInnerPeaceSection from '../components/FindYourInnerPeaceSection';
 import InspirationSection from '../components/InspirationSection';
@@ -36,6 +37,7 @@ const Home: React.FC = () => {
 
   return (
     <div className={`home ${isLoaded ? 'loaded' : ''}`}>
+      <HeroSection />
       <ServicesSection />
       <FindYourInnerPeaceSection />
       <InspirationSection />
