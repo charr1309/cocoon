@@ -62,7 +62,7 @@ const FindYourInnerPeaceSection: React.FC = () => {
                 <Leaf size={32} />
               </div>
               <h4>Holistic Approach</h4>
-              <p>We address the whole person - body, mind, and spirit - for complete wellness transformation</p>
+              <p>I address the whole person - body, mind, and spirit - for complete wellness transformation</p>
               <div className="value-accent"></div>
             </div>
             

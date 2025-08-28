@@ -97,7 +97,7 @@ const ServicesSection: React.FC = () => {
             <div className="house-calls-text">
               <p>
                 <span className="highlight">Holistic & Postpartum House calls:</span> 
-                available upon request. Pricing determined on varying factors. Give us a call to chat
+                available upon request. Pricing determined on varying factors. Give me a call to chat
               </p>
             </div>
           </div>

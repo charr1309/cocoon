@@ -71,7 +71,7 @@ const TestimonialsSection: React.FC = () => {
       <div className="container">
         <div className="testimonials-header fade-in">
           <h2>Client Love</h2>
-          <p>Hear from the amazing people who have experienced transformation through our care</p>
+          <p>Hear from the amazing people who have experienced transformation through my care</p>
         </div>
 
         <div className="testimonials-carousel fade-in">

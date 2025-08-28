@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
           <p className={`inspiration-text ${!isVisible ? 'fade-out' : ''}`}>
             "{inspirationalQuotes[currentQuoteIndex]}"
           </p>
-          <p className="inspiration-signature">- Cocoon Wellness</p>
+          <p className="inspiration-signature">- Shanna</p>
         </div>
       </div>
 

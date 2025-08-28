@@ -28,7 +28,7 @@ const InspirationSection: React.FC = () => {
       <div className="container">
         <div className="inspiration-header fade-in">
           <h1>Inspiration</h1>
-          <p className="section-subtitle">The story behind our sanctuary of healing and transformation</p>
+          <p className="section-subtitle">The story behind my sanctuary of healing and transformation</p>
         </div>
         
         <div className="inspiration">

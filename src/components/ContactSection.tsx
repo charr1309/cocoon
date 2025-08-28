@@ -38,7 +38,7 @@ const ContactSection: React.FC = () => {
       <div className="container">
         <div className="contact-header fade-in">
           <h1>Let's Talk</h1>
-          <p>Ready to begin your wellness journey? We're here to support you every step of the way.</p>
+          <p>Ready to begin your wellness journey? I'm here to support you every step of the way.</p>
         </div>
 
         <div className="contact-content">
