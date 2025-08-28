@@ -70,8 +70,7 @@ const HeroSection: React.FC = () => {
               />
               <div className="hero-overlay">
                 <div className="hero-content">
-                  <h1 className="hero-title">{slide.title}</h1>
-                  <h2 className="hero-subtitle">{slide.subtitle}</h2>
+                  <h1 className="hero-h1">{slide.title} {slide.subtitle}</h1>
                   <p className="hero-description">{slide.description}</p>
                   <button 
                     className="hero-cta-btn"

@@ -82,10 +82,10 @@
   }
 }
 
-.hero-title {
+.hero-h1 {
   font-family: 'Montserrat', sans-serif !important;
   font-size: 4rem;
-  font-weight: 400;
+  font-weight: 300;
   color: white !important;
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -93,15 +93,6 @@
   margin-bottom: 20px;
 }
 
-.hero-subtitle {
-  font-family: 'Montserrat', sans-serif !important;
-  font-size: 4rem;
-  font-weight: 300;
-  color: white !important;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  margin-bottom: 30px;
-}
 
 .hero-description {
   font-family: 'Montserrat', sans-serif !important;
