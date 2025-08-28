@@ -86,9 +86,9 @@
   font-family: 'Playfair Display', serif;
   font-size: 4rem;
   font-weight: 400;
-  color: white;
+  color: #ffffff;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   line-height: 1.2;
   margin-bottom: 20px;
 }
@@ -97,18 +97,18 @@
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
   font-weight: 300;
-  color: white;
+  color: #ffffff;
   letter-spacing: 1px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   margin-bottom: 30px;
 }
 
 .hero-description {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
-  color: white;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  opacity: 0.95;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  opacity: 1;
   line-height: 1.6;
   margin-bottom: 40px;
 }
@@ -116,7 +116,7 @@
 .hero-cta-btn {
   background: linear-gradient(135deg, #69d5c3, #5bc4b1);
   border: none;
-  color: white;
+  color: #ffffff;
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
@@ -145,7 +145,7 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
   transition: all 0.3s ease;
   z-index: 10;
@@ -193,8 +193,8 @@
 }
 
 .hero-indicator.active {
-  background: white;
-  border-color: white;
+  background: #ffffff;
+  border-color: #ffffff;
 }
 
 .hero-indicator:hover {
