@@ -27,44 +27,14 @@ const slides = [
 
 const HeroSlideshow: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [imagesLoaded, setImagesLoaded] = useState<boolean[]>(new Array(slides.length).fill(false));
-  const [allImagesLoaded, setAllImagesLoaded] = useState(false);
-
-  // Preload all images
-  useEffect(() => {
-    const loadImages = async () => {
-      const imagePromises = slides.map((slide, index) => {
-        return new Promise<void>((resolve) => {
-          const img = new Image();
-          img.onload = () => {
-            setImagesLoaded(prev => {
-              const newState = [...prev];
-              newState[index] = true;
-              return newState;
-            });
-            resolve();
-          };
-          img.onerror = () => resolve(); // Still resolve on error to prevent hanging
-          img.src = slide.image;
-        });
-      });
-
-      await Promise.all(imagePromises);
-      setAllImagesLoaded(true);
-    };
-
-    loadImages();
-  }, []);
 
   useEffect(() => {
-    if (!allImagesLoaded) return;
-
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [allImagesLoaded]);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -78,17 +48,6 @@ const HeroSlideshow: React.FC = () => {
     setCurrentSlide(index);
   };
 
-  if (!allImagesLoaded) {
-    return (
-      <section className="hero-slideshow">
-        <div className="hero-loading">
-          <div className="loading-spinner"></div>
-          <p>Loading...</p>
-        </div>
-      </section>
-    );
-  }
-
   return (
     <section className="hero-slideshow">
       <div className="slideshow-container">
@@ -101,7 +60,6 @@ const HeroSlideshow: React.FC = () => {
               src={slide.image} 
               alt={slide.title}
               className="hero-image"
-              style={{ display: imagesLoaded[index] ? 'block' : 'none' }}
             />
             <div className="hero-overlay"></div>
             <div className="hero-content">
