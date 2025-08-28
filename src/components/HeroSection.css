@@ -228,10 +228,10 @@
 
   .hero-logo {
     top: 100px;
-    left: 20px;
+    right: 20px;
+    left: auto;
     right: auto;
     transform: none;
-    right: auto;
   }
 
   .hero-logo img {
@@ -308,7 +308,8 @@
 
   .hero-logo {
     top: 90px;
-    left: 15px;
+    right: 15px;
+    left: auto;
     right: auto;
   }
 
