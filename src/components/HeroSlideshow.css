@@ -25,6 +25,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent !important;
+}
+
+/* Debug specific slides */
+.slide:nth-child(2),
+.slide:nth-child(3) {
+  background-color: transparent !important;
+  background-blend-mode: normal !important;
+  filter: none !important;
 }
 
 .slide.active {
