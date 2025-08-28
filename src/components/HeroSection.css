@@ -58,21 +58,31 @@
     rgba(0, 0, 0, 0.1) 50%,
     rgba(0, 0, 0, 0.2) 100%
   );
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   z-index: 3;
 }
 
 .hero-content {
-  max-width: 800px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 0 20px;
+  padding: 20px;
   animation: fadeInUp 1s ease-out;
 }
 
 .hero-logo {
-  margin-bottom: 30px;
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0;
 }
 
 .hero-logo img {
