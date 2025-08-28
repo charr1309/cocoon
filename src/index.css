@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Override Tailwind base styles for hero section */
+.hero-section * {
+  font-family: inherit !important;
+  color: inherit !important;
+}

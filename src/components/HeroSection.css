@@ -83,10 +83,10 @@
 }
 
 .hero-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-size: 4rem;
   font-weight: 400;
-  color: #ffffff;
+  color: #ffffff !important;
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   line-height: 1.2;
@@ -94,21 +94,21 @@
 }
 
 .hero-subtitle {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif !important;
   font-size: 2.5rem;
   font-weight: 300;
-  color: #ffffff;
+  color: #ffffff !important;
   letter-spacing: 1px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   margin-bottom: 30px;
 }
 
 .hero-description {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 1.3rem;
-  color: #ffffff;
+  color: #ffffff !important;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  opacity: 1;
+  opacity: 1 !important;
   line-height: 1.6;
   margin-bottom: 40px;
 }
@@ -116,8 +116,8 @@
 .hero-cta-btn {
   background: linear-gradient(135deg, #69d5c3, #5bc4b1);
   border: none;
-  color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
+  color: #ffffff !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 1.1rem;
   font-weight: 600;
   text-transform: uppercase;
