@@ -26,6 +26,17 @@
   gap: 60px;
 }
 
+.header-hero-logo {
+  display: none;
+  height: 40px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.header-hero-logo:hover {
+  transform: scale(1.05);
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -219,6 +230,21 @@
 
   .book-session-link {
     color: white !important;
+  }
+}
+
+@media (max-width: 768px) and (orientation: landscape) {
+  .header-container {
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .header-hero-logo {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 35px;
   }
 }
 

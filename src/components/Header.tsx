@@ -62,6 +62,12 @@ const Header: React.FC = () => {
           </div>
         </Link>
 
+        <img 
+          src="/MAIN LOGO2copy copy.png" 
+          alt="Cocoon Massage and Wellness Logo" 
+          className="header-hero-logo"
+        />
+
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
           <ul className="nav-list">
             <li>
