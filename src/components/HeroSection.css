@@ -79,7 +79,7 @@
 
 .hero-logo {
   position: absolute;
-  top: 30px;
+  top: 100px;
   left: 50%;
   transform: translateX(-50%);
   margin-bottom: 0;
