@@ -230,6 +230,7 @@
     top: 100px;
     right: 20px;
     left: auto;
+    transform: none;
     right: auto;
     transform: none;
   }
@@ -310,6 +311,7 @@
     top: 90px;
     right: 15px;
     left: auto;
+    transform: none;
     right: auto;
   }
 
