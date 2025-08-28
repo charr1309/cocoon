@@ -13,18 +13,6 @@ const heroSlides = [
     title: 'Prenatal Care',
     subtitle: 'Nurturing New Life',
     description: 'Specialized massage therapy for expecting mothers'
-  },
-  {
-    image: 's3.jpg',
-    title: 'Holistic Healing',
-    subtitle: 'Mind, Body & Spirit',
-    description: 'Comprehensive wellness treatments tailored to your needs'
-  },
-  {
-    image: 's4.jpg',
-    title: 'Inner Peace',
-    subtitle: 'Find Your Balance',
-    description: 'Discover tranquility through therapeutic touch'
   }
 ];
 
