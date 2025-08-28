@@ -83,7 +83,7 @@
 }
 
 .hero-title {
-  font-family: 'Playfair Display', serif !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 4rem;
   font-weight: 400;
   color: white !important;
@@ -94,8 +94,8 @@
 }
 
 .hero-subtitle {
-  font-family: 'Playfair Display', serif !important;
-  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 4rem;
   font-weight: 300;
   color: white !important;
   letter-spacing: 1px;
