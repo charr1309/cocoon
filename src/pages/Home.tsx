@@ -36,7 +36,7 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <div className={`home ${isLoaded ? 'loaded' : ''}`}>
+    <main className={`home ${isLoaded ? 'loaded' : ''}`}>
       <HeroSection />
       <ServicesSection />
       <FindYourInnerPeaceSection />
@@ -45,7 +45,7 @@ const Home: React.FC = () => {
       <GiftCardSection />
       <ContactSection />
       <BackToTopButton />
-    </div>
+    </main>
   );
 };
 
