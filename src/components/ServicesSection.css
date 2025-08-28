@@ -383,8 +383,7 @@
     position: relative;
   }
   
-  .service-card::before {
-    content: '';
+  .service-card .service-white-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -403,7 +402,7 @@
     transform: none !important;
   }
   
-  .service-card:hover::before {
+  .service-card:hover .service-white-overlay {
     opacity: 0;
   }
   

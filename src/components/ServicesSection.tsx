@@ -60,10 +60,10 @@ const ServicesSection: React.FC = () => {
             return (
               <div key={index} className="service-card fade-in">
                 <div className="service-white-overlay"></div>
+                <div className="service-white-overlay"></div>
                 <div className="service-icon">
                   <IconComponent size={40} />
                 </div>
-                <div className="service-white-overlay"></div>
                 <h3 className="service-title">{service.title}</h3>
                 <p className="service-subtitle">"{service.subtitle}"</p>
                 
