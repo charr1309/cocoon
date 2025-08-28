@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import CircularLogo from './CircularLogo';
 import './HeroSlideshow.css';
 
 const slides = [
@@ -28,64 +27,60 @@ const slides = [
 
 const HeroSlideshow: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   useEffect(() => {
-    if (!isAutoPlaying) return;
-
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [isAutoPlaying]);
+  }, []);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
-    setIsAutoPlaying(false);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-    setIsAutoPlaying(false);
   };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
-    setIsAutoPlaying(false);
   };
 
   return (
-    <section className="hero-slideshow">
-      <div className="slideshow-container">
+    <div className="hero-slideshow">
+      <div className="slides-container">
         {slides.map((slide, index) => (
           <div
             key={index}
             className={`slide ${index === currentSlide ? 'active' : ''}`}
-            style={{ backgroundImage: `url(${slide.image})` }}
           >
-            <div className="slide-content">
-              <h1 className="slide-title">{slide.title}</h1>
-              <p className="slide-subtitle">{slide.subtitle}</p>
-              <button 
-                className="btn"
-                onClick={() => window.open('https://spread-your-wings.noterro.com', '_blank')}
-              >
-                Book Your Session
-              </button>
+            <img src={slide.image} alt={slide.title} className="slide-image" />
+            <div className="slide-overlay">
+              <div className="slide-content">
+                <h1>{slide.title}</h1>
+                <p>{slide.subtitle}</p>
+                <button 
+                  className="btn hero-btn"
+                  onClick={() => window.open('https://spread-your-wings.noterro.com', '_blank')}
+                >
+                  Book Your Session
+                </button>
+              </div>
             </div>
           </div>
         ))}
       </div>
 
-      <button className="slide-nav slide-nav-prev" onClick={prevSlide}>
+      <button className="nav-btn prev-btn" onClick={prevSlide}>
         <ChevronLeft size={24} />
       </button>
-      <button className="slide-nav slide-nav-next" onClick={nextSlide}>
+      <button className="nav-btn next-btn" onClick={nextSlide}>
         <ChevronRight size={24} />
       </button>
 
-      <div className="slide-indicators">
+      <div className="indicators">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -94,7 +89,7 @@ const HeroSlideshow: React.FC = () => {
           />
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 
