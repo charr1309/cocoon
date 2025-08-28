@@ -25,15 +25,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: transparent !important;
-}
-
-/* Debug specific slides */
-.slide:nth-child(2),
-.slide:nth-child(3) {
-  background-color: transparent !important;
-  background-blend-mode: normal !important;
-  filter: none !important;
 }
 
 .slide.active {
@@ -41,13 +32,11 @@
 }
 
 .slide-content {
-  position: relative;
-  z-index: 10;
   text-align: center;
   color: white;
   max-width: 800px;
   padding: 0 20px;
-  animation: slideContentFadeIn 1s ease-out;
+  z-index: 2;
 }
 
 .slide-title {
@@ -55,7 +44,7 @@
   font-weight: 300;
   letter-spacing: 3px;
   margin-bottom: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   line-height: 1.2;
 }
 
@@ -63,7 +52,7 @@
   font-size: 1.5rem;
   font-weight: 300;
   margin-bottom: 40px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
   opacity: 0.9;
 }
 
@@ -129,17 +118,6 @@
   transform: scale(1.2);
 }
 
-@keyframes slideContentFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Mobile Styles */
 @media (max-width: 768px) {
   .hero-slideshow {
@@ -155,11 +133,6 @@
   .slide-subtitle {
     font-size: 1.2rem;
     margin-bottom: 30px;
-  }
-
-  .hero-logo-top img {
-    width: 60vw;
-    max-width: 400px;
   }
 
   .slide-nav {
@@ -201,10 +174,5 @@
 
   .slide-content {
     padding: 0 15px;
-  }
-
-  .hero-logo-top img {
-    width: 65vw;
-    max-width: 350px;
   }
 }
