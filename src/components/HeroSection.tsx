@@ -70,6 +70,9 @@ const HeroSection: React.FC = () => {
               />
               <div className="hero-overlay">
                 <div className="hero-content">
+                  <div className="hero-logo">
+                    <img src="/MAIN LOGO2copy.png" alt="Cocoon Massage and Wellness Logo" />
+                  </div>
                   <h1 className="hero-h1">{slide.title} {slide.subtitle}</h1>
                   <p className="hero-description">{slide.description}</p>
                   <button 

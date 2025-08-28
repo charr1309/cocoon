@@ -54,7 +54,11 @@ const Header: React.FC = () => {
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         <Link to="/" className="logo" onClick={handlePageNavigation}>
-          <img src="/MAIN LOGO2copy.png" alt="Cocoon Massage and Wellness" />
+          <img src="/FAVICON 1.png" alt="Cocoon Favicon" className="logo-favicon" />
+          <div className="logo-text">
+            <span className="logo-main">COCOON</span>
+            <span className="logo-sub">MASSAGE & WELLNESS</span>
+          </div>
         </Link>
 
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>

@@ -71,6 +71,21 @@
   animation: fadeInUp 1s ease-out;
 }
 
+.hero-logo {
+  margin-bottom: 30px;
+}
+
+.hero-logo img {
+  height: 120px;
+  width: auto;
+  filter: brightness(1.2);
+  transition: transform 0.3s ease;
+}
+
+.hero-logo img:hover {
+  transform: scale(1.05);
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
