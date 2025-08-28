@@ -58,7 +58,7 @@ const Wisdom: React.FC = () => {
                 </p>
               </div>
               <div className="education-image">
-                <img src="inspirationGarden.jpg" alt="Garden inspiration" />
+                <img src="newShanna.jpg" alt="Shanna at Swedish Institute" />
               </div>
             </div>
 
