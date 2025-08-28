@@ -10,22 +10,22 @@ const heroSlides = [
     description: 'Transform your wellness journey in our sanctuary of healing'
   },
   {
-    image: 's2.jpg',
-    title: 'Prenatal Care',
-    subtitle: 'Nurturing New Life',
-    description: 'Specialized massage therapy for expecting mothers'
-  },
-  {
     image: 'https://images.pexels.com/photos/1029604/pexels-photo-1029604.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&fit=crop',
     title: 'Find Your Peace',
     subtitle: 'In Nature\'s Embrace',
     description: 'Discover tranquility through holistic healing and mindful wellness'
   },
   {
-    image: 'https://images.pexels.com/photos/1402787/pexels-photo-1402787.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&fit=crop',
+    image: 's2.jpg',
+    title: 'Prenatal Care',
+    subtitle: 'Nurturing New Life',
+    description: 'Specialized massage therapy for expecting mothers'
+  },
+  {
+    image: 'https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&fit=crop',
     title: 'Restore & Rejuvenate',
-    subtitle: 'Your Sacred Space',
-    description: 'Experience deep relaxation in a serene, healing environment'
+    subtitle: 'In Peaceful Meadows',
+    description: 'Experience deep relaxation surrounded by nature\'s tranquil beauty'
   }
 ];
 
