@@ -1,78 +1,36 @@
-/* Hero Section - Clean CSS Grid/Flexbox approach */
-.hero-section {
+/* Bootstrap Hero Section Customizations */
+.carousel {
   position: relative;
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: 1fr;
 }
 
-.hero-container {
+.carousel-item {
   position: relative;
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-areas: "hero";
-}
-
-.hero-slide {
-  grid-area: hero;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-slide.active {
-  opacity: 1;
 }
 
 .hero-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-
-.hero-image img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
   object-position: center;
-  display: block;
+  filter: brightness(0.7);
 }
 
-.hero-overlay {
+.carousel-caption {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(
     135deg,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(0, 0, 0, 0.2) 50%,
-    rgba(0, 0, 0, 0.3) 100%
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.2) 100%
   );
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
+  padding: 0;
 }
 
 .hero-content {
-  text-align: center;
-  color: white;
   max-width: 800px;
-  padding: 0 20px;
   animation: fadeInUp 1s ease-out;
 }
 
@@ -88,278 +46,205 @@
 }
 
 .hero-title {
-  font-size: 4rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif !important;
+  color: white !important;
   letter-spacing: 2px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   line-height: 1.2;
 }
 
 .hero-subtitle {
-  font-size: 2rem;
-  font-family: 'Playfair Display', serif;
-  font-weight: 300;
-  color: #69d5c3;
-  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif !important;
+  color: #69d5c3 !important;
   letter-spacing: 1px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .hero-description {
-  font-size: 1.3rem;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  margin-bottom: 40px;
-  line-height: 1.6;
+  font-family: 'Montserrat', sans-serif !important;
+  color: white !important;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   opacity: 0.95;
 }
 
 .hero-cta-btn {
-  background: linear-gradient(135deg, #69d5c3, #5bc4b1);
-  color: white;
-  border: none;
-  padding: 18px 40px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #69d5c3, #5bc4b1) !important;
+  border: none !important;
+  font-family: 'Montserrat', sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 2px;
-  border-radius: 30px;
-  cursor: pointer;
+  border-radius: 30px !important;
   transition: all 0.3s ease;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .hero-cta-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-  background: linear-gradient(135deg, #5bc4b1, #4ab09d);
+  transform: translateY(-3px) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4) !important;
+  background: linear-gradient(135deg, #5bc4b1, #4ab09d) !important;
 }
 
-/* Navigation Controls */
-.hero-nav {
-  position: absolute;
+.carousel-control-prev,
+.carousel-control-next {
+  width: 60px;
+  height: 60px;
   top: 50%;
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
-  width: 60px;
-  height: 60px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
   transition: all 0.3s ease;
-  z-index: 3;
 }
 
-.hero-nav:hover {
+.carousel-control-prev {
+  left: 30px;
+}
+
+.carousel-control-next {
+  right: 30px;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: translateY(-50%) scale(1.1);
 }
 
-.hero-nav-prev {
-  left: 30px;
-}
-
-.hero-nav-next {
-  right: 30px;
-}
-
-/* Slide Indicators */
-.hero-indicators {
-  position: absolute;
+.carousel-indicators {
   bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 15px;
-  z-index: 3;
+  margin-bottom: 0;
 }
 
-.hero-indicator {
+.carousel-indicators button {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.6);
   background: transparent;
-  cursor: pointer;
+  margin: 0 7px;
   transition: all 0.3s ease;
 }
 
-.hero-indicator.active {
+.carousel-indicators button.active {
   background: white;
   border-color: white;
 }
 
-.hero-indicator:hover {
+.carousel-indicators button:hover {
   background: rgba(255, 255, 255, 0.8);
   transform: scale(1.2);
 }
 
-/* Tablet Styles */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .hero-section {
-    height: 100vh;
-  }
-
-  .hero-title {
-    font-size: 3.5rem;
-  }
-
-  .hero-subtitle {
-    font-size: 1.8rem;
-  }
-
-  .hero-description {
-    font-size: 1.2rem;
-  }
-
-  .hero-nav {
-    width: 50px;
-    height: 50px;
-  }
-
-  .hero-nav-prev {
-    left: 20px;
-  }
-
-  .hero-nav-next {
-    right: 20px;
-  }
-}
-
-/* Mobile Portrait */
-@media (max-width: 768px) and (orientation: portrait) {
-  .hero-section {
-    height: 70vh;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .carousel {
+    height: 70vh !important;
     min-height: 500px;
   }
 
   .hero-title {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+    font-size: 2.5rem !important;
   }
 
   .hero-subtitle {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
+    font-size: 1.8rem !important;
   }
 
   .hero-description {
-    font-size: 1.1rem;
-    margin-bottom: 30px;
+    font-size: 1.1rem !important;
   }
 
   .hero-cta-btn {
-    padding: 15px 30px;
-    font-size: 1rem;
+    padding: 15px 30px !important;
+    font-size: 1rem !important;
   }
 
-  .hero-nav {
+  .carousel-control-prev,
+  .carousel-control-next {
     width: 45px;
     height: 45px;
   }
 
-  .hero-nav-prev {
+  .carousel-control-prev {
     left: 15px;
   }
 
-  .hero-nav-next {
+  .carousel-control-next {
     right: 15px;
   }
 
-  .hero-indicators {
+  .carousel-indicators {
     bottom: 20px;
-    gap: 12px;
   }
 
-  .hero-indicator {
+  .carousel-indicators button {
     width: 10px;
     height: 10px;
+    margin: 0 6px;
   }
 }
 
-/* Mobile Landscape */
 @media (max-width: 768px) and (orientation: landscape) {
-  .hero-section {
-    height: 100vh;
+  .carousel {
+    height: 100vh !important;
     min-height: 400px;
   }
 
   .hero-title {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
+    font-size: 2.2rem !important;
   }
 
   .hero-subtitle {
-    font-size: 1.3rem;
-    margin-bottom: 10px;
+    font-size: 1.6rem !important;
   }
 
   .hero-description {
-    font-size: 1rem;
-    margin-bottom: 25px;
+    font-size: 1rem !important;
   }
 
   .hero-cta-btn {
-    padding: 12px 25px;
-    font-size: 0.95rem;
+    padding: 12px 25px !important;
+    font-size: 0.95rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel {
+    height: 65vh !important;
+    min-height: 450px;
   }
 
-  .hero-nav {
+  .hero-title {
+    font-size: 2rem !important;
+    letter-spacing: 1px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem !important;
+  }
+
+  .hero-description {
+    font-size: 1rem !important;
+  }
+
+  .hero-cta-btn {
+    padding: 14px 28px !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 1px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
     width: 40px;
     height: 40px;
   }
 
-  .hero-nav-prev {
+  .carousel-control-prev {
     left: 10px;
   }
 
-  .hero-nav-next {
+  .carousel-control-next {
     right: 10px;
-  }
-
-  .hero-indicators {
-    bottom: 15px;
-    gap: 10px;
-  }
-}
-
-/* Small Mobile */
-@media (max-width: 480px) {
-  .hero-section {
-    height: 65vh;
-    min-height: 450px;
-  }
-
-  .hero-content {
-    padding: 0 15px;
-  }
-
-  .hero-title {
-    font-size: 2rem;
-    letter-spacing: 1px;
-  }
-
-  .hero-subtitle {
-    font-size: 1.2rem;
-  }
-
-  .hero-description {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-
-  .hero-cta-btn {
-    padding: 14px 28px;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
   }
 }

@@ -36,16 +36,18 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <main className={`home ${isLoaded ? 'loaded' : ''}`}>
+    <div className={`home ${isLoaded ? 'loaded' : ''}`}>
       <HeroSection />
-      <ServicesSection />
-      <FindYourInnerPeaceSection />
-      <InspirationSection />
-      <TestimonialsSection />
-      <GiftCardSection />
-      <ContactSection />
+      <main>
+        <ServicesSection />
+        <FindYourInnerPeaceSection />
+        <InspirationSection />
+        <TestimonialsSection />
+        <GiftCardSection />
+        <ContactSection />
+      </main>
       <BackToTopButton />
-    </main>
+    </div>
   );
 };
 
