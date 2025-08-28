@@ -370,42 +370,7 @@
 }
 
 /* Mobile Styles */
-@media (max-width: 768px) and (orientation: portrait) {
-  .services-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .services-section .service-card {
-    width: 280px;
-    height: 320px !important;
-    transition: all 0.5s ease !important;
-    position: relative;
-  }
-  
-  .services-section .service-card .service-white-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: white;
-    z-index: 2;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-    border-radius: 20px;
-  }
-  
-  .services-section .service-card:hover {
-    width: 320px;
-    height: 700px !important;
-    transform: none !important;
-  }
-  
-  .services-section .service-card:hover .service-white-overlay {
-    opacity: 0;
-  }
-  
+@media (max-width: 768px) {
   .house-calls-content {
     grid-template-columns: 1fr;
     gap: 20px;

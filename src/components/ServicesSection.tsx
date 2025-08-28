@@ -59,8 +59,6 @@ const ServicesSection: React.FC = () => {
             const IconComponent = service.icon;
             return (
               <div key={index} className="service-card fade-in">
-                <div className="service-white-overlay"></div>
-                <div className="service-white-overlay"></div>
                 <div className="service-icon">
                   <IconComponent size={40} />
                 </div>
