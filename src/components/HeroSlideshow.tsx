@@ -64,7 +64,6 @@ const HeroSlideshow: React.FC = () => {
             className={`slide ${index === currentSlide ? 'active' : ''}`}
             style={{ backgroundImage: `url(${slide.image})` }}
           >
-            <div className="slide-overlay"></div>
             <div className="slide-content">
               <h1 className="slide-title">{slide.title}</h1>
               <p className="slide-subtitle">{slide.subtitle}</p>
