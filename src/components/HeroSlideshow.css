@@ -27,16 +27,6 @@
   justify-content: center;
 }
 
-.slide::before {
-  content: none !important;
-  display: none !important;
-}
-
-.slide::after {
-  content: none !important;
-  display: none !important;
-}
-
 .slide.active {
   opacity: 1;
 }
@@ -49,7 +39,6 @@
   max-width: 800px;
   padding: 0 20px;
   animation: slideContentFadeIn 1s ease-out;
-  background: none !important;
 }
 
 .slide-title {
@@ -59,7 +48,6 @@
   margin-bottom: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 0, 0, 0.5);
   line-height: 1.2;
-  background: none !important;
 }
 
 .slide-subtitle {
@@ -68,7 +56,6 @@
   margin-bottom: 40px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8), 0 0 8px rgba(0, 0, 0, 0.5);
   opacity: 0.9;
-  background: none !important;
 }
 
 .slide-nav {
