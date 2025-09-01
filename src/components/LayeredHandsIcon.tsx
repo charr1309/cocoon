@@ -18,33 +18,63 @@ const LayeredHandsIcon: React.FC<LayeredHandsIconProps> = ({ size = 24, classNam
       strokeLinejoin="round"
       className={className}
     >
-      {/* Back hand (slightly offset) */}
-      <path
-        d="M4 14c0-1.5 1-3 2.5-3.5L8 10c1-0.5 2-0.5 3 0l1.5 0.5c1.5 0.5 2.5 2 2.5 3.5v4c0 1.5-1 3-2.5 3.5L11 22c-1 0.5-2 0.5-3 0l-1.5-0.5C5 21 4 19.5 4 18v-4z"
-        transform="translate(2, -2) scale(0.8)"
-        opacity="0.6"
+      {/* Back/body surface line */}
+      <line
+        x1="2"
+        y1="18"
+        x2="22"
+        y2="18"
+        strokeWidth="2.5"
+        opacity="0.8"
       />
       
-      {/* Front hand (main hand) */}
+      {/* Wrist/forearm */}
       <path
-        d="M2 12c0-1.5 1-3 2.5-3.5L6 8c1-0.5 2-0.5 3 0l1.5 0.5c1.5 0.5 2.5 2 2.5 3.5v4c0 1.5-1 3-2.5 3.5L9 20c-1 0.5-2 0.5-3 0l-1.5-0.5C3 19 2 17.5 2 16v-4z"
+        d="M2 12 L6 12"
+        strokeWidth="3"
+        strokeLinecap="round"
       />
       
-      {/* Pressure/energy lines */}
+      {/* Palm (side view) */}
       <path
-        d="M6 18l0 2"
-        strokeWidth="1"
-        opacity="0.7"
+        d="M6 12 Q8 10 10 11 Q12 12 13 13 Q14 14 14 15 Q14 16 13 17 Q11 18 9 18 Q7 17 6 15 Z"
+        fill="currentColor"
+        fillOpacity="0.1"
+        strokeWidth="1.5"
+      />
+      
+      {/* Thumb (side view) */}
+      <path
+        d="M8 11 Q9 9 10 9 Q11 9 11 10 Q11 11 10 12 Q9 12 8 11"
+        fill="currentColor"
+        fillOpacity="0.15"
+        strokeWidth="1.5"
+      />
+      
+      {/* Fingers (curved downward) */}
+      <path
+        d="M10 13 Q11 15 11 16 Q11 17 10 17"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
       <path
-        d="M8 18l0 2"
-        strokeWidth="1"
-        opacity="0.7"
+        d="M12 13 Q13 15 13 16 Q13 17 12 17"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
       <path
-        d="M10 18l0 2"
-        strokeWidth="1"
-        opacity="0.7"
+        d="M14 14 Q15 15 15 16 Q15 17 14 16"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      
+      {/* Subtle pressure indication */}
+      <circle
+        cx="11"
+        cy="16"
+        r="1"
+        fill="currentColor"
+        fillOpacity="0.3"
       />
     </svg>
   );
