@@ -103,12 +103,20 @@ const ButterflyAnimation: React.FC = () => {
         }}
       >
         <div className="butterfly-body"></div>
-        <div className="butterfly-wing butterfly-wing-left">
+        <div className="butterfly-wing-upper butterfly-wing-upper-left">
+          <div className="butterfly-wing-pattern"></div>
+        </div>
+        <div className="butterfly-wing-upper butterfly-wing-upper-right">
+          <div className="butterfly-wing-pattern"></div>
+        </div>
+        <div className="butterfly-wing-lower butterfly-wing-lower-left">
+          <div className="butterfly-wing-pattern"></div>
+        </div>
+        <div className="butterfly-wing-lower butterfly-wing-lower-right">
           <div className="wing-pattern"></div>
         </div>
-        <div className="butterfly-wing butterfly-wing-right">
-          <div className="wing-pattern"></div>
-        </div>
+        <div className="butterfly-antennae"></div>
+        <div className="butterfly-antennae-tips"></div>
       </div>
     </div>
   );
