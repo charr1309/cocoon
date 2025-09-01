@@ -131,3 +131,5 @@ const ButterflyAnimation: React.FC = () => {
 };
 
 export default ButterflyAnimation;
+  )
+}
