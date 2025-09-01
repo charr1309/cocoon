@@ -1,5 +1,6 @@
 import React from 'react';
-import { Heart, Baby, Flower, Sparkles, Bot as Lotus } from 'lucide-react';
+import { Heart, Baby, Flower, Sparkles } from 'lucide-react';
+import LayeredHandsIcon from './LayeredHandsIcon';
 import './ServicesSection.css';
 
 const services = [
@@ -36,7 +37,7 @@ const services = [
     price: "Starting at $190"
   },
   {
-    icon: Lotus,
+    icon: LayeredHandsIcon,
     title: "SHIATSU MASSAGE",
     subtitle: "THE SICHUAN",
     description: "A massage derived from Chinese medicine and five element theory performed with clothing on. This type of massage nourishes the flow of qi by utilizing stretches, joint mobility, compression and acupressure points. Your therapist will incorporate hands, fingers, knees, feet and palms during your treatment.",
