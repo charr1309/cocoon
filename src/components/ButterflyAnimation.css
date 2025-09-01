@@ -23,6 +23,30 @@
   transition: transform 0.15s ease-out;
 }
 
+.butterfly.flapping .butterfly-wing-upper-left {
+  animation: wingFlapUpperLeft 0.4s ease-in-out infinite;
+}
+
+.butterfly.flapping .butterfly-wing-upper-right {
+  animation: wingFlapUpperRight 0.4s ease-in-out infinite;
+}
+
+.butterfly.flapping .butterfly-wing-lower-left {
+  animation: wingFlapLowerLeft 0.4s ease-in-out infinite;
+}
+
+.butterfly.flapping .butterfly-wing-lower-right {
+  animation: wingFlapLowerRight 0.4s ease-in-out infinite;
+}
+
+.butterfly.resting .butterfly-wing-upper-left,
+.butterfly.resting .butterfly-wing-upper-right,
+.butterfly.resting .butterfly-wing-lower-left,
+.butterfly.resting .butterfly-wing-lower-right {
+  animation: none;
+  transform: rotateY(0deg) rotateX(0deg);
+}
+
 /* Butterfly body - centered and acts as anchor point */
 .butterfly-body {
   position: absolute;
@@ -259,6 +283,43 @@
   left: 8px;
   width: 3px;
   height: 3px;
+}
+
+/* Wing Flapping Animations */
+@keyframes wingFlapUpperLeft {
+  0%, 100% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  50% {
+    transform: rotateY(-45deg) rotateX(15deg);
+  }
+}
+
+@keyframes wingFlapUpperRight {
+  0%, 100% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  50% {
+    transform: rotateY(45deg) rotateX(15deg);
+  }
+}
+
+@keyframes wingFlapLowerLeft {
+  0%, 100% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  50% {
+    transform: rotateY(-35deg) rotateX(10deg);
+  }
+}
+
+@keyframes wingFlapLowerRight {
+  0%, 100% {
+    transform: rotateY(0deg) rotateX(0deg);
+  }
+  50% {
+    transform: rotateY(35deg) rotateX(10deg);
+  }
 }
 
 /* Mobile adjustments */
