@@ -10,8 +10,8 @@ const LayeredHandsIcon: React.FC<LayeredHandsIconProps> = ({ size = 40, classNam
     <img 
       src="/shiatsuIcon copy.png" 
       alt="Shiatsu Massage" 
-      width={60} 
-      height={60}
+      width={70} 
+      height={70}
       className={className}
       style={{
         objectFit: 'contain'
