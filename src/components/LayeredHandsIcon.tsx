@@ -14,8 +14,7 @@ const LayeredHandsIcon: React.FC<LayeredHandsIconProps> = ({ size = 40, classNam
       height={size}
       className={className}
       style={{
-        objectFit: 'contain',
-        filter: 'brightness(0) invert(1)' // Makes the icon white
+        objectFit: 'contain'
       }}
     />
   );
