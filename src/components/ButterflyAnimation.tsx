@@ -99,7 +99,7 @@ const ButterflyAnimation: React.FC = () => {
       <div 
         className={`butterfly ${isMoving ? 'flapping' : 'resting'}`}
         style={{
-          transform: `rotateX(${rotation.rotateX}deg) rotateY(${rotation.rotateY}deg) rotateZ(${rotation.rotateZ}deg)`
+          transform: `rotateX(0deg) rotateY(0deg) rotateZ(0deg)`
         }}
       >
         <div className="butterfly-body"></div>
@@ -114,6 +114,14 @@ const ButterflyAnimation: React.FC = () => {
         </div>
         <div className="butterfly-wing-lower butterfly-wing-lower-right">
           <div className="wing-pattern"></div>
+        <div className="butterfly-wing-upper butterfly-wing-upper-right">
+        <div className="butterfly-antennae"></div>
+        <div className="butterfly-antennae-tips"></div>
+        <div className="butterfly-wing-lower butterfly-wing-lower-left">
+          <div className="butterfly-wing-pattern"></div>
+        </div>
+        <div className="butterfly-wing-lower butterfly-wing-lower-right">
+          <div className="butterfly-wing-pattern"></div>
         </div>
         <div className="butterfly-antennae"></div>
         <div className="butterfly-antennae-tips"></div>
