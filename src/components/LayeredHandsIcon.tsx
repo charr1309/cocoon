@@ -8,7 +8,7 @@ interface LayeredHandsIconProps {
 const LayeredHandsIcon: React.FC<LayeredHandsIconProps> = ({ size = 40, className = '' }) => {
   return (
     <img 
-      src="/shiatsuIcon.png" 
+      src="/shiatsuIcon copy.png" 
       alt="Shiatsu Massage" 
       width={60} 
       height={60}
