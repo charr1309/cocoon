@@ -29,28 +29,6 @@ const Home: React.FC = () => {
     };
     
     handleHashNavigation();
-    
-    // Add scroll animation observer
-    const observerOptions = {
-      threshold: 0.05,
-      rootMargin: '0px 0px -20px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        } else {
-          // Don't remove visible class once added to prevent flickering
-          // entry.target.classList.remove('visible');
-        }
-      });
-    }, observerOptions);
-
-    const animatedElements = document.querySelectorAll('.fade-in');
-    animatedElements.forEach(el => observer.observe(el));
-
-    return () => observer.disconnect();
   }, []);
 
   return (
