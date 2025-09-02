@@ -25,7 +25,7 @@ const heroSlides = [
     image: 'https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&fit=crop',
     title: 'Therapeutic Touch',
     subtitle: 'Healing Hands',
-    description: 'Experience the power of therapeutic massage in a serene spa environment'
+    description: 'Experience the power of therapeutic massage in a serene environment'
   }
 ];
 
