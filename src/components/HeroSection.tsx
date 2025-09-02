@@ -19,7 +19,7 @@ const heroSlides = [
     image: 's2.jpg',
     title: 'Prenatal Care',
     subtitle: 'Nurturing New Life',
-    description: 'Specialized massage therapy for expecting mothers'
+    description: 'Specialized massage therapy for expecting parents'
   },
   {
     image: 'https://images.pexels.com/photos/3757942/pexels-photo-3757942.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1280&fit=crop',
