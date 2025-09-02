@@ -40,7 +40,7 @@ const ButterflyAnimation: React.FC = () => {
             newRotation = { rotateX: -10, rotateY: 0, rotateZ: 0 };
           } else {
             // Moving down - slight downward tilt
-            newRotation = { rotateX: 10, rotateY: 0, rotateZ: 0 };
+            newRotation = { rotateX: 180, rotateY: 0, rotateZ: 0 };
           }
         }
         
